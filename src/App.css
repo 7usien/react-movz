@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3d55cc;
+  --darkest: #141a33;
+  --dark: #4f5573;
+  --medium: #858aa6;
+  --light: #dadef2;
+  --lightest: #f5f6fa;
+}
+
+body {
+  background-color: var(--lightest);
+}
+
+#root {
+  margin: 0 auto;
+}
