@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { HiVideoCamera } from 'react-icons/hi';
 import logo from '../../assets/logo.svg';
 
 const Header = () => {
@@ -31,31 +31,34 @@ const Header = () => {
 
         <div className='group geners bg-dark text-white rounded-md p-1 capitalize text-lg relative'>
           <h3 className='p-2 flex align-middle border-none relative hover:bg-primary cursor-pointer'>
-            <a href='#'>choose your generes</a>
+            <a href='#'>
+              <HiVideoCamera className='inline-block align-middle mr-1' />
+              choose your generes
+            </a>
           </h3>
           <ul className='absolute bg-dark left-0 top-12 w-full rounded-md  opacity-0  group-hover:opacity-100'>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>comedy</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>family</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>darma</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>horor</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>tech</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>faction</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>sci-tech</a>
             </li>
-            <li className='border-b border-slate-500/95 p-2'>
+            <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>futureistic</a>
             </li>
           </ul>
