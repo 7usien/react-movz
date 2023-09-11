@@ -23,11 +23,11 @@ const TopList = () => {
   }, []);
 
   return (
-    <>
+    <div className=''>
       {movieList.map((movie) => (
         <TopListItem key={movie.id} data={{ ...movie }} />
       ))}
-    </>
+    </div>
   );
 };
 

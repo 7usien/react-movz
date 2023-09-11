@@ -29,14 +29,14 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className='group geners bg-dark text-white rounded-md p-1 capitalize text-lg relative'>
+        <div className='group geners bg-dark text-white rounded-md p-1 capitalize text-lg relative '>
           <h3 className='p-2 flex align-middle border-none relative hover:bg-primary cursor-pointer'>
             <a href='#'>
               <HiVideoCamera className='inline-block align-middle mr-1' />
               choose your generes
             </a>
           </h3>
-          <ul className='absolute bg-dark left-0 top-12 w-full rounded-md  opacity-0  group-hover:opacity-100'>
+          <ul className='absolute bg-dark left-0 top-12 w-full rounded-md  opacity-0  group-hover:opacity-100 z-10'>
             <li className='border-b border-slate-500/95 p-2 hover:bg-darkest'>
               <a href='#'>comedy</a>
             </li>
