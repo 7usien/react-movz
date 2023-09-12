@@ -4,6 +4,7 @@ import TopListItem from '../TopListItem/TopListItem';
 
 const TopList = () => {
   const [movieList, setMovieList] = useState([]);
+  const [movieVideo, setMovieVideo] = useState([]);
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ const TopList = () => {
           },
         }
       );
+
       return setMovieList(res.data.results);
     };
     fetchMovies();

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaStar, FaYoutube } from 'react-icons/fa';
+import useTrailer from '../../hooks/useTrailer';
 let count = 0;
 const TopListItem = ({ data }) => {
-  const { title, overview, vote_average, poster_path, release_date } = data;
+  const [videoList, setVideoList] = useState([]);
+  const { title, overview, vote_average, poster_path, release_date, id } = data;
 
+  const { videoKeys, videoID, chosenOne } = useTrailer(id);
+  console.log(chosenOne);
   count++;
   return (
     <div className='bg-white text-darkest flex gap-2 col-span-3 mb-3 shadow-md relative p-2  '>
@@ -15,7 +19,8 @@ const TopListItem = ({ data }) => {
 
       <div className='flex flex-col gap-1'>
         <a
-          href='#'
+          target='_blank'
+          href={`https://www.youtube.com/watch?v=${videoList.key}`}
           className='block bg-darkest text-white text-center p-2 w-fit  text-sm rounded-md absolute bottom-2 left-2 shadow-lg '
         >
           <FaYoutube className='inline align-middle mr-2' />
