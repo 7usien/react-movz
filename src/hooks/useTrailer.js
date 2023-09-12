@@ -19,15 +19,6 @@ function useTrailer(videoID) {
 
       setVideoKeys(response.data.results);
 
-      setChosenOne(
-        videoKeys.filter((video) => {
-          return (
-            video.type === 'Trailer' &&
-            video.site === 'Youtube' &&
-            video.official === true
-          );
-        })
-      );
       //videoKeys > array> filter id==id
       // chosenOne has trailer and offical
       // return it as key
@@ -35,6 +26,18 @@ function useTrailer(videoID) {
 
     fecthVideo();
   }, [videoID]);
+
+  useEffect(() => {
+    setChosenOne(
+      videoKeys.filter((video) => {
+        return (
+          video.type === 'Trailer' &&
+          video.site === 'YouTube' &&
+          video.official === true
+        );
+      })
+    );
+  }, [videoKeys]);
 
   return { videoKeys, videoID, chosenOne };
 }
