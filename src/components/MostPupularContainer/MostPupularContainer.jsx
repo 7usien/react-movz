@@ -4,8 +4,9 @@ import { useId } from 'react';
 import useMostPopular from '../../hooks/useMostPopular';
 
 const MostPupularContainer = ({ type, title, count, children }) => {
-  const { loading, data } = useMostPopular('movie');
+  const { loading, data } = useMostPopular(type);
   const slicesChildren = children.slice(0, count);
+
   return (
     <>
       <h3 className='text-darkest text-3xl capitalize pb-4'>{title}</h3>

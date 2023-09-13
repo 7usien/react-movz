@@ -4,20 +4,11 @@ import Container from './components/Container/Container';
 import TopList from './components/TopList/TopList';
 import MostPupularContainer from './components/MostPupularContainer/MostPupularContainer';
 import BlockItem from './components/BlockItem/BlockItem';
-import Slider from 'react-slick';
 
 import './App.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 function App() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-  };
-
   return (
     <>
       <Header />
@@ -30,6 +21,25 @@ function App() {
             count={12}
             title='most popular movies'
             type='movie'
+          >
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+            <BlockItem />
+          </MostPupularContainer>
+
+          <MostPupularContainer
+            count={12}
+            title='most popular tv shows'
+            type='tv'
           >
             <BlockItem />
             <BlockItem />
