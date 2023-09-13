@@ -26,8 +26,12 @@ const TopList = () => {
 
   return (
     <div className=''>
-      {movieList.map((movie) => (
-        <TopListItem key={movie.id} data={{ ...movie }} />
+      <h3 className='text-darkest capitalize text-3xl b-4 border-b-2 border-light'>
+        top all the time
+      </h3>
+
+      {movieList.map((movie, idx) => (
+        <TopListItem key={movie.id} index={idx} data={{ ...movie }} />
       ))}
     </div>
   );

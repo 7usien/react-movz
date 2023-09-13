@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { FaStar, FaYoutube } from 'react-icons/fa';
 import useTrailer from '../../hooks/useTrailer';
-let count = 0;
-const TopListItem = ({ data }) => {
-  const [videoList, setVideoList] = useState([]);
+
+const TopListItem = ({ data, index }) => {
   const { title, overview, vote_average, poster_path, release_date, id } = data;
+  const { videoID, chosenOne } = useTrailer(id);
 
-  const { videoKeys, videoID, chosenOne } = useTrailer(id);
-
-  count++;
   return (
     <div className='bg-white text-darkest flex gap-2 col-span-3 mb-3 shadow-md relative p-2  '>
       <img
@@ -27,8 +24,8 @@ const TopListItem = ({ data }) => {
           trailer
         </a>
 
-        <span className='text-light text-4xl absolute top-1/2 -translate-y-2/4 right-6'>
-          {count}
+        <span className='text-light text-4xl absolute top-1/2 -translate-y-2/4 right-2'>
+          {index + 1}
         </span>
         <h2 className='text-lg text-darkest capitalize'>{title}</h2>
         <span className='block text-medium text-sm'>{release_date}</span>

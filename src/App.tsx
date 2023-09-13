@@ -27,7 +27,7 @@ function App() {
 
         <div className='content'>
           <MostPupularContainer
-            count={8}
+            count={12}
             title='most popular movies'
             type='movie'
           >
