@@ -1,63 +1,58 @@
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Container from './components/Container/Container';
-import TopList from './components/TopList/TopList';
-import MostPupularContainer from './components/MostPupularContainer/MostPupularContainer';
-import BlockItem from './components/BlockItem/BlockItem';
+//react
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+//compo
+import MasterLayout from './pages/Layout/MasterLayout';
+
+//style
 import './App.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import Home from './pages/Home/Home';
+import TopPage from './pages/TopPage/TopPage';
+import NowPlayingPage from './pages/NowPlaying/NowPlayingPage';
+import PopularPage from './pages/Popular/PopularPage';
+import TrendingPage from './pages/Trending/TrendingPage';
+import MovieDetails from './pages/MovieDetails/MovieDetails';
+
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <MasterLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        {
+          path: 'top',
+          element: <TopPage />,
+        },
+
+        {
+          path: 'now-playing',
+          element: <NowPlayingPage />,
+        },
+
+        {
+          path: 'popular',
+          element: <PopularPage />,
+        },
+
+        {
+          path: 'trending',
+          element: <TrendingPage />,
+        },
+        {
+          path: 'movie/:id',
+          element: <MovieDetails />,
+        },
+      ],
+    },
+  ]);
+
   return (
     <>
-      <Header />
-
-      <Container>
-        <TopList />
-
-        <div className='content'>
-          <MostPupularContainer
-            count={12}
-            title='most popular movies'
-            type='movie'
-          >
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-          </MostPupularContainer>
-
-          <MostPupularContainer
-            count={12}
-            title='most popular tv shows'
-            type='tv'
-          >
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-            <BlockItem />
-          </MostPupularContainer>
-        </div>
-      </Container>
-
-      <Footer />
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }

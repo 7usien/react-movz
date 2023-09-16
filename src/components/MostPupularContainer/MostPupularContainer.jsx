@@ -9,8 +9,8 @@ const MostPupularContainer = ({ type, title, count, children }) => {
 
   return (
     <>
-      <h3 className='text-darkest text-3xl capitalize pb-4'>{title}</h3>
-      <div className='grid grid-cols-4 gap-4'>
+      <h3 className='text-darkest text-xl pb-4 capitalize'>{title}</h3>
+      <div className='grid grid-cols-4 gap-6'>
         {slicesChildren?.map((child, idx) => {
           return React.cloneElement(
             child,

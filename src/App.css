@@ -15,8 +15,18 @@
 
 body {
   background-color: var(--lightest);
+  font-family: 'Inria Sans', arial;
 }
 
 #root {
   margin: 0 auto;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }

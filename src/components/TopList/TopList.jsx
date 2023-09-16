@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import TopListItem from '../TopListItem/TopListItem';
-
+import { BiMoviePlay } from 'react-icons/bi';
 const TopList = () => {
   const [movieList, setMovieList] = useState([]);
   const [movieVideo, setMovieVideo] = useState([]);
@@ -25,8 +25,9 @@ const TopList = () => {
   }, []);
 
   return (
-    <div className=''>
-      <h3 className='text-darkest capitalize text-3xl b-4 border-b-2 border-light'>
+    <div className='font-Inria+Sans'>
+      <h3 className='text-darkest capitalize text-xl b-4 pb-2 flex items-center gap-2'>
+        <BiMoviePlay />
         top all the time
       </h3>
 

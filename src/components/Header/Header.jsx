@@ -1,30 +1,35 @@
 import React from 'react';
 import { HiVideoCamera } from 'react-icons/hi';
 import logo from '../../assets/logo.svg';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className=' w-full bg-white drop-shadow-md h-20 '>
-      <div className='max-w-7xl m-auto flex justify-between items-center content-center; align-middle h-20 '>
-        <div className='text-primary flex place-items-center gap-1 text-lg'>
-          <img src={logo} alt='' />
-          <h1>React movz DB</h1>
+    <header className=' w-full bg-white drop-shadow-md h-24 '>
+      <div className='max-w-7xl m-auto flex justify-between items-center content-center; align-middle h-24 '>
+        <div className='text-primary  text-lg'>
+          <NavLink to='/' className='flex place-items-center gap-1'>
+            <img src={logo} alt='' />
+            <h1>React movz DB</h1>
+          </NavLink>
         </div>
 
         <div className='text-darkest flex align-middle text-lg'>
           <ul className='flex capitalize gap-4 align-middle'>
             <li>
-              <a href='#'>top</a>
+              <NavLink to='top' end>
+                top
+              </NavLink>
             </li>
             <li>
-              <a href='#'>now playing</a>
+              <NavLink to='now-playing'>now playing</NavLink>
             </li>
 
             <li>
-              <a href='#'>popular</a>
+              <NavLink to='popular'>popular</NavLink>
             </li>
             <li>
-              <a href='#'>trending</a>
+              <NavLink to='trending'>trending</NavLink>
             </li>
           </ul>
         </div>
