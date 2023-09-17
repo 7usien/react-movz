@@ -16,6 +16,7 @@
 body {
   background-color: var(--lightest);
   font-family: 'Inria Sans', arial;
+  scroll-behavior: smooth;
 }
 
 #root {
