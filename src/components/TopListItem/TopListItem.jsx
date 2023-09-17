@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaStar, FaYoutube } from 'react-icons/fa';
 import useTrailer from '../../hooks/useTrailer';
 import { NavLink } from 'react-router-dom';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const TopListItem = ({ data, index }) => {
   const { title, overview, vote_average, poster_path, release_date, id } = data;
@@ -9,11 +10,15 @@ const TopListItem = ({ data, index }) => {
 
   return (
     <div className='bg-white text-darkest flex gap-2 col-span-3 mb-3 shadow-md relative p-2  '>
-      <img
-        className='w-20 rounded-r-lg'
-        src={`https://image.tmdb.org/t/p/original${poster_path}`}
-        alt=''
-      />
+      {poster_path ? (
+        <img
+          className='w-20 rounded-r-lg'
+          src={`https://image.tmdb.org/t/p/original${poster_path}`}
+          alt=''
+        />
+      ) : (
+        <AiOutlineLoading3Quarters className='animate-spin text-medium text-5xl text-center block m-auto' />
+      )}
 
       <div className='flex flex-col gap-1'>
         <a
