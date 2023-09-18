@@ -9,12 +9,14 @@ import './App.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+//pages
 import Home from './pages/Home/Home';
 import TopPage from './pages/TopPage/TopPage';
 import NowPlayingPage from './pages/NowPlaying/NowPlayingPage';
 import PopularPage from './pages/Popular/PopularPage';
 import TrendingPage from './pages/Trending/TrendingPage';
 import MovieDetails from './pages/MovieDetails/MovieDetails';
+import GenreDetails from './pages/GenreDetails/GenreDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -45,6 +47,10 @@ function App() {
         {
           path: 'movie/:id',
           element: <MovieDetails />,
+        },
+        {
+          path: 'genre/:name',
+          element: <GenreDetails />,
         },
       ],
     },

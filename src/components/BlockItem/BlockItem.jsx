@@ -16,7 +16,7 @@ const BlockItem = ({ data }) => {
 
   return (
     <div className='bg-white text-darkest shadow-md relative rounded-md'>
-      <div className='hover:scale-110 duration-300 ease-in-out '>
+      <div className='hover:scale-105  duration-300 ease-in-out '>
         <NavLink to={`movie/${id}`}>
           {poster_path ? (
             <img
