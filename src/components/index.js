@@ -8,6 +8,7 @@ import TopListItem from './TopListItem/TopListItem';
 
 import MostPupularContainer from './MostPupularContainer/MostPupularContainer';
 import BlockItem from './BlockItem/BlockItem';
+import Loading from './Loading/Loading';
 
 export {
   Header,
@@ -17,4 +18,5 @@ export {
   TopListItem,
   MostPupularContainer,
   BlockItem,
+  Loading
 };

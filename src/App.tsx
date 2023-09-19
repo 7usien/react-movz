@@ -17,7 +17,6 @@ import PopularPage from './pages/Popular/PopularPage';
 import TrendingPage from './pages/Trending/TrendingPage';
 import MovieDetails from './pages/MovieDetails/MovieDetails';
 import GenreDetails from './pages/GenreDetails/GenreDetails';
-
 function App() {
   const router = createBrowserRouter([
     {
@@ -49,7 +48,7 @@ function App() {
           element: <MovieDetails />,
         },
         {
-          path: 'genre/:name',
+          path: 'genre/:id',
           element: <GenreDetails />,
         },
       ],
