@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from "react";
 
 import { BiSolidMoviePlay } from "react-icons/bi";
 import { GenreContext } from "../../context/GenreContext";
+import SearchForm from "../Search/SearchForm";
 
 const Header = () => {
  const { setGenres, genres } = useContext(GenreContext);
@@ -77,16 +78,7 @@ const Header = () => {
      </ul>
     </div>
 
-    <div className="search">
-     <form action="#">
-      <input
-       type="text"
-       placeholder="search for a movie"
-       className="border-dark-2 bg-white border-2 rounded-md p-2 capitalize"
-      />
-      <input type="submit" value="search" className="bg-dark p-2 rounded-md" />
-     </form>
-    </div>
+<SearchForm />
    </div>
   </header>
  );

@@ -9,6 +9,7 @@ import TopListItem from './TopListItem/TopListItem';
 import MostPupularContainer from './MostPupularContainer/MostPupularContainer';
 import BlockItem from './BlockItem/BlockItem';
 import Loading from './Loading/Loading';
+import SearchForm from './Search/SearchForm';
 
 export {
   Header,
@@ -18,5 +19,6 @@ export {
   TopListItem,
   MostPupularContainer,
   BlockItem,
-  Loading
+  Loading,
+  SearchForm
 };
