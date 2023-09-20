@@ -40,7 +40,9 @@ const SearchResults = () => {
   <>
    {
     (searchData.length === 0 ? (
-     <Loading className="m-auto" />
+      <div className=" w-full flex items-center justify-center m-auto col-span-2">
+      <Loading text="fetching search results .." />
+     </div>
     ) : (
      <div className="text-darkest col-span-4 grid grid-cols-5 gap-4">
       {searchData.map((result) => (
